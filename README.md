@@ -1,8 +1,13 @@
-# React + Vite
+### To run the app, follow the instructions below:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. Install dependencies
 
-Currently, two official plugins are available:
+   `npm i`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. Run Json-server
+
+   `npm run server`
+
+3. Run the app
+
+   `npm run dev`
