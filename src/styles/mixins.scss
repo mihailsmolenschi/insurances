@@ -1,0 +1,7 @@
+@mixin transition-effect() {
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 50%;
+  }
+}

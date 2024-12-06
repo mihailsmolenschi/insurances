@@ -1,0 +1,93 @@
+@use "../styles/variables.scss" as v;
+
+header {
+  position: sticky;
+  top: 0;
+
+  background-color: v.$color-white;
+
+  box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);
+  border-radius: 0px;
+
+  z-index: 100;
+
+  .wrapper {
+    margin: auto;
+
+    max-width: 1920px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .menu-logo-container {
+      display: flex;
+      justify-content: space-between;
+      width: 334px;
+
+      .menu {
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+
+        img {
+          width: 32px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+      .logo-container {
+        img {
+          width: 200px;
+        }
+      }
+    }
+
+    .motto-container {
+      width: 431px;
+
+      .moto {
+        width: 333px;
+        font-family: v.$font-motto;
+      }
+    }
+
+    .auth-container {
+      width: 215px;
+      display: flex;
+      gap: 15px;
+
+      button {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+
+        width: 100px;
+        background-color: transparent;
+
+        border: none;
+        padding: 0;
+        margin: 0;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        img {
+          width: 32px;
+        }
+        span {
+          display: inline-block;
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

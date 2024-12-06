@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "pt-root-ui";
+  src: url("/fonts/pt-root-ui_vf.ttf");
+}
+
+// TODO: not working, needed to be reviewed
+@font-face {
+  font-family: "Raleway-Regular";
+  src: url("/fonts/Raleway-VariableFont_wght.ttf");
+}
+
+$font-size-default: 18px;
+$font-primary: "pt-root-ui", sans;
+$font-motto: "Raleway-Regular";
+
+$color-black: #1b1918;
+$color-white: #fff;
+$color-gray: #e7e5e4;
+$color-dark-gray: #42403f;
+$color-burgundy: #a40731;
+$color-orange: #e8a412;
+
+$color-danger: #e83912;
+$color-success: #00834b;

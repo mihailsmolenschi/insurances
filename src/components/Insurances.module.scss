@@ -1,0 +1,156 @@
+@use "../styles/typography.scss" as t;
+@use "../styles/variables.scss" as v;
+@use "../styles/animations.scss" as a;
+
+.insurances {
+  display: flex;
+  justify-content: space-between;
+
+  .container {
+    margin-top: 98px;
+    margin-bottom: 115px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .insurance-types {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px;
+
+      width: auto;
+      height: 159px;
+
+      background: linear-gradient(
+        85.58deg,
+        #a40731 -0.38%,
+        #830b3a 41.27%,
+        #002359 103.58%
+      );
+      box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);
+      border-radius: 7px;
+
+      .title {
+        @include t.h3(v.$color-white);
+      }
+
+      .tab-list {
+        display: flex;
+        gap: 29px;
+
+        .tab {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding: 0 28px;
+
+          width: fit-content;
+          height: 45px;
+
+          background-color: v.$color-white;
+          border: 1px solid v.$color-gray;
+          border-radius: 7px;
+
+          font-family: v.$font-primary;
+          font-size: v.$font-size-default;
+
+          cursor: pointer;
+
+          transition: box-shadow 0.3s ease;
+
+          &:hover {
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+          }
+
+          &.active {
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+          }
+        }
+      }
+    }
+
+    .details-section {
+      display: flex;
+      gap: 20px;
+      min-height: 600px;
+
+      .calculator-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 40px;
+        width: 640px;
+
+        .selection-tab {
+          @include a.fadeIn;
+        }
+
+        .tab-controls {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      .collapsible-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 82px 0 0 10px;
+
+        width: 640px;
+
+        .collapse-container {
+          display: flex;
+          flex-direction: column;
+
+          width: 630px;
+
+          box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);
+          border-radius: 7px;
+
+          cursor: pointer;
+
+          .collapse-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10.5px 16px 10.5px 20px;
+            gap: 20px;
+
+            border-bottom: 1px solid hwb(344 3% 36% / 0.1);
+
+            background: #ffffff;
+            border-radius: 7px 7px 0px 0px;
+
+            h5 {
+              @include t.paragraph-bold;
+            }
+
+            .btn-close {
+              width: 18px;
+            }
+          }
+
+          .description {
+            padding: 20px;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 20px;
+
+            &.collapse {
+              display: none;
+            }
+
+            p {
+              @include t.small-text(v.$color-dark-gray);
+            }
+          }
+        }
+      }
+    }
+  }
+}

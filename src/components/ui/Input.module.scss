@@ -1,0 +1,27 @@
+@use "../../styles/variables.scss" as v;
+
+.input {
+  padding: 0px 15px;
+
+  width: 300px;
+  height: 45px;
+
+  font-family: v.$font-primary;
+  font-size: v.$font-size-default;
+
+  background-color: v.$color-white;
+
+  border: 1px solid #e7e5e4;
+  border-radius: 7px;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    border: 1px solid #c4083a;
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid #c4083a;
+  }
+}

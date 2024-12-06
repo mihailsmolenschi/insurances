@@ -1,0 +1,49 @@
+@use "../../styles/variables.scss" as v;
+@use "../../styles/typography.scss" as t;
+
+@mixin toggleClass($background-color, $boder-color) {
+  background-color: $background-color;
+  border: 1px solid $boder-color;
+
+  &:hover {
+    background-color: $boder-color;
+    border: 1px solid $background-color;
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 29px;
+  gap: 10px;
+
+  width: fit-content;
+  height: 45px;
+
+  font-family: v.$font-primary;
+  @include t.paragraph-bold;
+
+  border-radius: 7px;
+
+  transition: all 0.3s ease;
+
+  &.white {
+    @include toggleClass(v.$color-white, v.$color-burgundy);
+    &:hover {
+      color: v.$color-white;
+    }
+  }
+
+  &.burgundy {
+    @include toggleClass(v.$color-burgundy, v.$color-white);
+    color: v.$color-white;
+    &:hover {
+      color: v.$color-black;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,11 @@
+@use "../../styles/variables.scss" as v;
+
+.contact-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100px;
+
+  // background: #f9f9f9;
+  // border-right: 1px solid v.$color-gray;
+}

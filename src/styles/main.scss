@@ -1,0 +1,28 @@
+@use "./variables.scss" as v;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: v.$font-primary;
+  font-size: v.$font-size-default;
+}
+
+body {
+  min-width: 1800px;
+
+  margin: 0 auto;
+
+  color: v.$color-black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}

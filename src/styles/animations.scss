@@ -1,0 +1,25 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-300px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@mixin fadeIn {
+  animation: fadeIn 0.3s ease;
+}
+
+@mixin slideRight {
+  animation: slideRight 0.3s ease;
+}

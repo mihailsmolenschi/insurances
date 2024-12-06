@@ -1,0 +1,74 @@
+@use "../styles/variables.scss" as v;
+@use "../styles/typography.scss" as t;
+
+.consultation {
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  background-color: v.$color-white;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    .info {
+      width: 640px;
+
+      h3 {
+        @include t.h3;
+
+        margin-bottom: 20px;
+      }
+
+      p {
+        @include t.paragraph(v.$color-dark-gray);
+      }
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      width: 640px;
+
+      .inputs-container {
+        display: flex;
+        gap: 40px;
+        width: 100%;
+
+        input {
+          padding: 0px 15px;
+
+          width: 300px;
+          height: 45px;
+
+          font-family: v.$font-primary;
+          font-size: v.$font-size-default;
+
+          background-color: v.$color-white;
+
+          border: 1px solid #e7e5e4;
+          border-radius: 7px;
+
+          transition: all 0.3s ease;
+
+          &:hover {
+            border: 1px solid #c4083a;
+          }
+
+          &:focus {
+            outline: none;
+            border: 1px solid #c4083a;
+          }
+        }
+      }
+
+      .btn-wrapper {
+        display: flex;
+        flex-grow: 1;
+        justify-content: right;
+      }
+    }
+  }
+}

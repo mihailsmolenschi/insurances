@@ -1,0 +1,148 @@
+@use "../styles/variables.scss" as v;
+@use "../styles/typography.scss" as t;
+@use "../styles/animations.scss" as a;
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+  gap: 30px;
+
+  position: fixed;
+  top: 0;
+  left: -400px;
+
+  width: 400px;
+  height: 100vh;
+
+  overflow-y: auto;
+
+  background-color: v.$color-white;
+  z-index: 1000;
+
+  &.open-menu {
+    left: 0;
+    @include a.slideRight;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 30px;
+
+    width: 340px;
+    height: 48px;
+
+    .btn-close {
+      background-color: transparent;
+      border: none;
+
+      cursor: pointer;
+    }
+
+    h5 {
+      @include t.h5;
+    }
+  }
+
+  .categories {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+
+    width: 340px;
+    height: 717px;
+
+    flex-grow: 1;
+
+    .item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0px 5px 0px 0px;
+      gap: 10px;
+
+      width: 340px;
+      height: 30px;
+
+      .link {
+        color: v.$color-black;
+        @include t.h5;
+      }
+    }
+  }
+
+  .language {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+
+    width: 101px;
+    height: 27px;
+
+    .btns {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 0px;
+      gap: 8px;
+
+      width: 73px;
+      height: 27px;
+
+      button {
+        color: v.$color-black;
+        @include t.paragraph;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        &.active {
+          color: v.$color-burgundy;
+        }
+      }
+    }
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+
+    width: 340px;
+    height: 138px;
+
+    .section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0px;
+      gap: 10px;
+
+      width: 340px;
+      height: 27px;
+
+      .link {
+        @include t.paragraph;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+svg {
+  width: 24px;
+  path {
+    fill: v.$color-burgundy;
+  }
+}

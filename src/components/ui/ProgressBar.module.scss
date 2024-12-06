@@ -1,0 +1,16 @@
+@use "../../styles/variables.scss" as v;
+
+.progressbar {
+  display: flex;
+  width: 100px;
+  padding: 35px 32px;
+
+  flex-direction: column;
+  justify-content: space-between;
+  background: #f9f9f9;
+  border-left: 1px solid v.$color-gray;
+
+  img {
+    width: 35px;
+  }
+}

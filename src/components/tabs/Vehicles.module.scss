@@ -1,0 +1,42 @@
+@use "../../styles/typography.scss" as t;
+@use "../../styles/variables.scss" as v;
+
+.title {
+  margin-bottom: 40px;
+  @include t.h3;
+}
+
+.selection-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  .card {
+    width: 200px;
+    height: 125px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+    gap: 7px;
+
+    background: #ffffff;
+    box-shadow: 0px 5px 15px 2px rgba(27, 25, 24, 0.05);
+    border-radius: 7px;
+    text-align: center;
+
+    cursor: pointer;
+
+    &.selected {
+      border: 1px solid v.$color-burgundy;
+    }
+
+    img {
+      width: 50px;
+    }
+    p {
+      @include t.small-text;
+    }
+  }
+}

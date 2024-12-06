@@ -1,0 +1,102 @@
+@use "./variables.scss" as v;
+
+@mixin h1($color: v.$color-black) {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  color: $color;
+}
+
+@mixin h2($color: v.$color-black) {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  color: $color;
+}
+
+@mixin h3($color: v.$color-black) {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 42px;
+  color: $color;
+}
+
+@mixin h4($color: v.$color-black) {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: $color;
+}
+
+@mixin h5($color: v.$color-black) {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: $color;
+}
+
+@mixin h6($color: v.$color-black) {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color;
+}
+
+@mixin paragraph($color: v.$color-black) {
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.01em;
+  color: $color;
+}
+
+@mixin paragraph-bold($color: v.$color-black) {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+
+  color: $color;
+}
+
+@mixin small-text($color: v.$color-black) {
+  font-size: 14px;
+  line-height: 21px;
+
+  color: $color;
+}
+
+@mixin extra-small-text($color: v.$color-black) {
+  font-size: 12px;
+  line-height: 18px;
+
+  color: $color;
+}
+
+@mixin extra-small-text-bold($color: v.$color-black) {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+
+  color: $color;
+}
+
+// h1 {
+//   font-weight: 700;
+//   font-size: 36px;
+//   line-height: 54px;
+// }
+// h2 {
+//   font-weight: 700;
+//   font-size: 32px;
+//   line-height: 48px;
+// }
+// h3 {
+//   font-weight: 700;
+//   font-size: 28px;
+//   line-height: 42px;
+// }
+// h4 {
+// }
+// h5 {
+// }
+// h6 {
+// }

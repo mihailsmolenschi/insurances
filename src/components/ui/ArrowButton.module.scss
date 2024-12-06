@@ -1,0 +1,123 @@
+@use "../../styles/typography.scss" as t;
+@use "../../styles/variables.scss" as v;
+
+.btn-arrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 15px;
+
+  width: fit-content;
+
+  height: 45px;
+
+  border-radius: 7px;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  transition: all 0.5s ease;
+  font-family: v.$font-primary;
+  font-size: v.$font-size-default;
+
+  &.white-danger {
+    color: v.$color-white;
+
+    svg {
+      transition: all 0.8s ease;
+      path {
+        fill: v.$color-white;
+      }
+    }
+
+    &:hover {
+      color: v.$color-danger;
+      svg {
+        transform: scaleX(1.4);
+        path {
+          fill: v.$color-danger;
+        }
+      }
+    }
+  }
+
+  &.burgundy-bold {
+    color: v.$color-burgundy;
+    font-weight: bold;
+
+    svg {
+      transition: all 0.8s ease;
+
+      path {
+        fill: v.$color-burgundy;
+      }
+    }
+
+    &:hover {
+      svg {
+        transform-origin: 0% 50%;
+        transform: scaleX(1.4);
+      }
+    }
+  }
+
+  &.white-left {
+    color: v.$color-black;
+    font-weight: bold;
+    transition: all 0.8s ease;
+
+    svg {
+      transition: all 0.5s ease;
+
+      path {
+        fill: v.$color-black;
+      }
+    }
+
+    &:hover {
+      color: v.$color-white;
+
+      svg {
+        transform: scaleX(1.4);
+        path {
+          fill: v.$color-white;
+        }
+      }
+    }
+  }
+
+  &.burgundy-right {
+    color: v.$color-white;
+    background-color: v.$color-burgundy;
+    margin: -29px;
+    padding: 9px 29px;
+    font-weight: bold;
+    transition: all 0.8s ease;
+
+    svg {
+      transition: all 0.5s ease;
+
+      path {
+        fill: v.$color-white;
+      }
+    }
+
+    &:hover {
+      color: v.$color-black;
+      background-color: v.$color-white;
+      border: 1px solid v.$color-burgundy;
+      border-radius: 7px;
+
+      svg {
+        transform: scaleX(1.4);
+        path {
+          fill: v.$color-black;
+        }
+      }
+    }
+  }
+}
